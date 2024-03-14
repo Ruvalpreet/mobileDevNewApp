@@ -15,10 +15,15 @@ function App() {
     'Go to gym',
     'Walk dog',
   ]);
+
+  const addItem = item => {
+    setItems([...items, item]);
+  };
+
   return (
     <SafeAreaView>
-      <ToDoList item = {items} />
-      <ToDoForm />
+      <ToDoList items={items} />
+      <ToDoForm addItem={addItem} />
     </SafeAreaView>
   );
 }
