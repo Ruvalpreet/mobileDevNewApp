@@ -7,15 +7,15 @@ function ToDoList(props) {
   // const renderedItems = [];
 
   //for (const item of items) {
-    // const rendered = (
-    //   <Pressable>
-    //     <View style={[styles.task]}>
-    //       <Text style={styles.taskText}>{item}</Text>
-    //     </View>
-    //   </Pressable>
-    // );
-    // renderedItems.push(rendered);
-  }
+  // const rendered = (
+  //   <Pressable>
+  //     <View style={[styles.task]}>
+  //       <Text style={styles.taskText}>{item}</Text>
+  //     </View>
+  //   </Pressable>
+  // );
+  // renderedItems.push(rendered);
+
   return (
     <>
       <ScrollView>
