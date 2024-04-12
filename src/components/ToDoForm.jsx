@@ -7,8 +7,16 @@ import {
   TextInput,
   Button,
 } from 'react-native';
+import tasks from '../data/task';
 
 function ToDoForm({addItem}) {
+  const [randomNumber, setRandomNumber] = React.useState(0);
+
+  const handleAddTask = () => {
+    setRandomNumber(Math.floor(Math.random() * 9));
+
+    addItem(tasks[randomNumber]);
+  };
   const [taskText, setTaskText] = React.useState('');
   return (
     <>
@@ -20,6 +28,8 @@ function ToDoForm({addItem}) {
           value={taskText}
         />
         <Button title="Add" onPress={() => addItem(taskText)} />
+
+        <Button title="Generate Random task" onPress={handleAddTask} />
       </View>
     </>
   );
